@@ -2,12 +2,12 @@ const EDUCATION = [
   {
     year: '2021 – 2025',
     degree: 'Bachelor of Science in Computer Science & Information Technology',
-    school: 'Tribhuvan University, Kathmandu, Nepal',
+    school: 'Nepalaya College, Tribhuvan University',
   },
   {
-    year: '2019 – 2021',
-    degree: '+2 Science (Computer Science)',
-    school: 'Higher Secondary Board, Nepal',
+    year: '2019 – 2020',
+    degree: '+2 Science',
+    school: 'Kathmandu Valley College, National Examination Board',
   },
 ];
 
@@ -34,7 +34,6 @@ export default function Education() {
               <div className="edu-year">{e.year}</div>
               <div className="edu-degree">{e.degree}</div>
               <div className="edu-school">{e.school}</div>
-              <div className="edu-todo">{'// TODO: Replace with actual data'}</div>
             </div>
           ))}
         </div>
