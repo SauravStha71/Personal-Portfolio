@@ -1,33 +1,35 @@
 import { SiGithub } from 'react-icons/si';
+import { HiGlobeAlt } from 'react-icons/hi';
 
 const PROJECTS = [
   {
     num: '01',
     title: 'Video Editor Portfolio',
-    desc: 'A cinematic, editorial-style portfolio website for a video editor. Features smooth scroll-triggered animations, hover-to-play video cards, and an asymmetric grid layout with a premium Behance-like user experience.',
-    tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-    repo: 'https://github.com/SauravStha71',
+    desc: 'A cinematic, editorial style portfolio website for a video editor built using React and Tailwind CSS, featuring smooth scroll triggered animations, hover to play video cards, and an asymmetric Behance inspired layout. Integrated Cloudinary for a dynamic media library, optimized video delivery, and a premium fast loading user experience.',
+    tech: ['React', 'Tailwind CSS', 'Cloudinary'],
+    repo: 'https://maharjandipen.netlify.app/',
+    isWebsite: true,
   },
   {
     num: '02',
     title: 'To-Do App',
-    desc: 'A fully type-safe task management application with persistent local storage, drag-and-drop reordering, priority tagging, and a clean minimal UI built with TypeScript for robust state management.',
-    tech: ['React', 'TypeScript', 'Tailwind CSS'],
-    repo: 'https://github.com/SauravStha71',
+    desc: 'A responsive task management application built using React Native, TypeScript, and Tailwind CSS, featuring task creation, editing, deletion, and priority based organization. Integrated React Native AsyncStorage for persistent local data storage, ensuring seamless offline access and a smooth, reliable user experience.',
+    tech: ['React Native', 'TypeScript', 'Tailwind CSS'],
+    repo: 'https://github.com/SauravStha71/ToDoList',
   },
   {
     num: '03',
     title: 'SMS System',
-    desc: 'A student management system featuring real-time data tables, role-based access control, and full CRUD operations backed by a PostgreSQL relational database with a clean React dashboard interface.',
-    tech: ['React', 'PostgreSQL', 'Tailwind CSS'],
-    repo: 'https://github.com/SauravStha71',
+    desc: 'Designed a dynamic SMS management system with reusable table components to efficiently display user and billing data. Implemented search and pagination features for improved data navigation and usability. Built a clean, responsive UI using React and Tailwind CSS for an optimized user experience.',
+    tech: ['React', 'Tailwind CSS'],
+    hideLink: true,
   },
   {
     num: '04',
     title: 'MD Meeting Schedule',
-    desc: 'A meeting scheduling platform for executives with calendar integrations, MongoDB persistence, conflict detection, and a responsive TypeScript React interface supporting multi-timezone scheduling.',
-    tech: ['React', 'TypeScript', 'MongoDB'],
-    repo: 'https://github.com/SauravStha71',
+    desc: 'Meeting Management System is a full-stack web application for NEA with role-based access (Admin, GM, PA, MD). Built with React and Node.js, it enables meeting scheduling, management, dashboards, and automated SMS notifications with secure JWT authentication.',
+    tech: ['React', 'Tailwind CSS', 'MongoDB', 'Node.js'],
+    hideLink: true,
   },
 ];
 
@@ -35,18 +37,11 @@ export default function Projects() {
   return (
     <section id="projects" className="section-wrapper" style={{ borderTop: '1px solid var(--border)' }}>
       <div className="container">
-        {/* Opening tag */}
         <div className="section-tag" style={{ marginBottom: 32 }}>&lt;Projects /&gt;</div>
-
-        {/* Eyebrow */}
         <div className="eyebrow">/* 02 — projects */</div>
-
-        {/* Heading */}
         <h2 className="section-heading" style={{ marginBottom: 48 }}>
           <span className="bracket-red">&lt;</span>Projects<span className="bracket-red"> /&gt;</span>
         </h2>
-
-        {/* 2×2 Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2, background: 'var(--border)' }}
              className="projects-grid">
           {PROJECTS.map((p) => (
@@ -57,19 +52,26 @@ export default function Projects() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                 {p.tech.map(t => <span key={t} className="tech-pill">{t}</span>)}
               </div>
-              <a href={p.repo} target="_blank" rel="noreferrer" className="github-link">
-                <span className="git-label">git clone</span>
-                <SiGithub size={13} />
-                View on GitHub
-              </a>
+              {!p.hideLink && (
+                <a href={p.repo} target="_blank" rel="noreferrer" className="github-link">
+                  {p.isWebsite ? (
+                    <>
+                      <HiGlobeAlt size={13} />
+                      View Website
+                    </>
+                  ) : (
+                    <>
+                      <SiGithub size={13} />
+                      View on GitHub
+                    </>
+                  )}
+                </a>
+              )}
             </div>
           ))}
         </div>
-
-        {/* Closing tag */}
         <div className="section-tag" style={{ marginTop: 32 }}>&lt;/Projects&gt;</div>
       </div>
-
       <style>{`
         @media (max-width: 640px) {
           .projects-grid { grid-template-columns: 1fr !important; }
