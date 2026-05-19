@@ -19,7 +19,7 @@ export default function Hero() {
           <div>
             {/* Eyebrow */}
             <div className="eyebrow fade-up">
-              /* Frontend Developer · Based in Nepal */
+              /* Frontend Developer */
             </div>
 
             {/* Heading */}
@@ -45,7 +45,7 @@ export default function Hero() {
               <a href="https://github.com/SauravStha71" target="_blank" rel="noreferrer" className="social-pill">
                 <SiGithub size={14} /> GitHub
               </a>
-              <a href="https://linkedin.com/in/sauravshrestha" target="_blank" rel="noreferrer" className="social-pill">
+              <a href="https://www.linkedin.com/in/sauravshrestha71/" target="_blank" rel="noreferrer" className="social-pill">
                 <FaLinkedin size={14} /> LinkedIn
               </a>
             </div>

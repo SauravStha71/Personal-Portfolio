@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#hero" onClick={e => { e.preventDefault(); handleNav('#hero'); }}
              style={{ fontFamily: 'var(--font-heading)', fontSize: '1.35rem', fontWeight: 700, letterSpacing: '-0.5px' }}>
-            SS<span style={{ color: 'var(--accent)' }}>.</span>
+            SS<span style={{ color: 'var(--accent)' }}></span>
           </a>
 
           {/* Desktop Links */}

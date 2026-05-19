@@ -14,20 +14,20 @@ const CONTACTS = [
   {
     Icon: MailIcon,
     prefix: 'mailto:',
-    label: 'saurav@email.com',
-    href: 'mailto:saurav@email.com',
+    label: 'shresthasaurav71@gmail.com',
+    href: 'mailto:shresthasaurav71@gmail.com',
   },
   {
     Icon: SiGithub,
     prefix: 'github.com/',
     label: 'SauravStha71',
-    href: 'https://github.com/SauravStha71',
+    href: 'https://github.com/SauravStha71', 
   },
   {
     Icon: FaLinkedin,
     prefix: 'linkedin.com/in/',
-    label: 'sauravshrestha',
-    href: 'https://linkedin.com/in/sauravshrestha',
+    label: 'SauravShrestha',
+    href: 'https://www.linkedin.com/in/sauravshrestha71/',
   },
 ];
 
