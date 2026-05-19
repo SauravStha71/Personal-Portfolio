@@ -26,7 +26,7 @@ export default function Hero() {
             <h1 className="fade-up-delay-1"
                 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, lineHeight: 1, letterSpacing: '-3px', fontSize: 'clamp(3.5rem, 10vw, 7rem)', marginBottom: 8 }}>
               Saurav<br />
-              <span style={{ color: 'var(--accent)' }}>Shrestha.</span>
+              <span style={{ color: 'var(--accent)' }}>Shrestha</span>
             </h1>
             <span className="cursor-blink fade-up-delay-1" aria-hidden="true" />
 
