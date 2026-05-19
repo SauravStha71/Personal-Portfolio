@@ -5,7 +5,7 @@ import {
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 
-const SKILLS = [
+const SKILL_ROWS = [
   [
     { label: 'JavaScript',   Icon: SiJavascript,  color: '#F7DF1E' },
     { label: 'TypeScript',   Icon: SiTypescript,  color: '#3178C6' },
@@ -36,31 +36,29 @@ export default function Skills() {
     <section id="skills" className="section-wrapper" style={{ borderTop: '1px solid var(--border)' }}>
       <div className="container">
 
-        {/* Opening tag */}
-        <div className="section-tag" style={{ marginBottom: 32 }}>&lt;Skills /&gt;</div>
-
-        {/* Eyebrow */}
+        <div className="section-tag" style={{ marginBottom: 28 }}>&lt;Skills /&gt;</div>
         <div className="eyebrow">/* 01 — skills */</div>
-
-        {/* Heading */}
-        <h2 className="section-heading" style={{ marginBottom: 48 }}>
+        <h2 className="section-heading" style={{ marginBottom: 52 }}>
           <span className="bracket-red">&lt;</span>Skills<span className="bracket-red"> /&gt;</span>
         </h2>
 
-        {/* Skill rows */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-          {SKILLS.map((row, ri) => (
-            <div key={ri} style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 10,
-              paddingTop: ri > 0 ? 20 : 0,
-              paddingBottom: 20,
-              borderBottom: '1px solid var(--border)',
-            }}>
+          {SKILL_ROWS.map((row, ri) => (
+            <div
+              key={ri}
+              className="skill-row-grid"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: `repeat(${row.length}, 1fr)`,
+                gap: 12,
+                paddingTop: ri > 0 ? 20 : 0,
+                paddingBottom: 20,
+                borderBottom: '1px solid var(--border)',
+              }}
+            >
               {row.map(({ label, Icon, color }) => (
-                <span key={label} className="skill-tag">
-                  <Icon size={16} color={color} />
+                <span key={label} className="skill-tag" style={{ justifyContent: 'center' }}>
+                  <Icon size={18} color={color} />
                   {label}
                 </span>
               ))}
@@ -68,8 +66,7 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Closing tag */}
-        <div className="section-tag" style={{ marginTop: 32 }}>&lt;/Skills&gt;</div>
+        <div className="section-tag" style={{ marginTop: 28 }}>&lt;/Skills&gt;</div>
       </div>
     </section>
   );

@@ -95,12 +95,6 @@ export default function Contact() {
         <div className="section-tag">&lt;/Contact&gt;</div>
       </div>
 
-      <style>{`
-        @media (max-width: 640px) {
-          .contact-panels { grid-template-columns: 1fr !important; }
-          .contact-panels > div:first-child { border-right: none !important; border-bottom: 1px solid var(--border); }
-        }
-      `}</style>
     </section>
   );
 }

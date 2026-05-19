@@ -43,11 +43,6 @@ export default function Education() {
         <div className="section-tag" style={{ marginTop: 32 }}>&lt;/Education&gt;</div>
       </div>
 
-      <style>{`
-        @media (max-width: 640px) {
-          .edu-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

@@ -31,23 +31,10 @@ const PROJECTS = [
   },
 ];
 
-const SNIPPETS = [
-  { top: '8%',  left: '2%',  text: `const [state, setState] = useState(null);\nuseEffect(() => {\n  fetchData().then(setState);\n}, []);` },
-  { top: '55%', right: '2%', text: `return (\n  <Component\n    props={data}\n    onClick={handler}\n  />\n);` },
-  { top: '30%', left: '60%', text: `export default function App() {\n  return <Router><App /></Router>;\n}` },
-];
-
 export default function Projects() {
   return (
-    <section id="projects" className="section-wrapper" style={{ borderTop: '1px solid var(--border)', position: 'relative', overflow: 'hidden' }}>
-      {/* Floating code snippets */}
-      {SNIPPETS.map((s, i) => (
-        <pre key={i} className="floating-snippet" style={{ top: s.top, left: s.left, right: s.right }}>
-          {s.text}
-        </pre>
-      ))}
-
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+    <section id="projects" className="section-wrapper" style={{ borderTop: '1px solid var(--border)' }}>
+      <div className="container">
         {/* Opening tag */}
         <div className="section-tag" style={{ marginBottom: 32 }}>&lt;Projects /&gt;</div>
 

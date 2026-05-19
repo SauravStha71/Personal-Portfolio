@@ -521,7 +521,6 @@ a {
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  max-width: 420px;
   width: 100%;
 }
 
@@ -590,14 +589,15 @@ a {
    UTILITIES
    ============================================================ */
 .section-wrapper {
-  padding: 100px 0;
+  padding: 80px 0;
   position: relative;
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1600px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 60px;
 }
 
 .divider {
@@ -619,3 +619,108 @@ a {
 .fade-up-delay-3 { animation: fadeUp 0.7s ease 0.35s forwards; opacity: 0; }
 .fade-up-delay-4 { animation: fadeUp 0.7s ease 0.5s forwards; opacity: 0; }
 .fade-up-delay-5 { animation: fadeUp 0.7s ease 0.65s forwards; opacity: 0; }
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .container { padding: 0 40px; }
+  .section-wrapper { padding: 64px 0; }
+
+  .code-window { max-width: 100%; }
+
+  .exp-gutter { min-width: 150px; padding-right: 20px; }
+  .exp-role { font-size: 1.3rem; }
+
+  .edu-card { padding: 28px; }
+  .edu-degree { font-size: 1.15rem; }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .section-wrapper { padding: 56px 0; }
+
+  /* Typography scale-down */
+  .section-heading { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+  .eyebrow { font-size: 11px; }
+  .section-tag { font-size: 11px; }
+
+  /* Hero — single column */
+  .hero-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .hero-grid > div:last-child { justify-content: flex-start !important; }
+  .code-window { width: 100% !important; max-width: 100% !important; }
+  .code-window-body { font-size: 12px !important; padding: 16px 18px !important; line-height: 1.9 !important; }
+
+  /* Buttons */
+  .btn-primary, .btn-ghost { font-size: 12px; padding: 11px 20px; }
+
+  /* Skills grid — 2 cols on mobile */
+  .skill-row-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Projects — 1 col */
+  .projects-grid { grid-template-columns: 1fr !important; }
+  .project-card { padding: 20px; }
+  .project-title { font-size: 1.1rem; }
+
+  /* Experience — stacked */
+  .exp-row { flex-direction: column !important; gap: 16px !important; }
+  .exp-gutter {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+    padding-right: 0 !important;
+    padding-bottom: 16px;
+    min-width: unset !important;
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .exp-role { font-size: 1.2rem; }
+
+  /* Education — 1 col */
+  .edu-grid { grid-template-columns: 1fr !important; }
+  .edu-card { padding: 22px; }
+  .edu-degree { font-size: 1.1rem; }
+
+  /* Contact — stacked */
+  .contact-panels { grid-template-columns: 1fr !important; }
+  .contact-panels > div:first-child {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-label { font-size: 13px; }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL PHONES (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .section-wrapper { padding: 44px 0; }
+
+  .section-heading { font-size: clamp(1.4rem, 7vw, 2rem); }
+
+  /* Skills — 1 col on very small phones */
+  .skill-row-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+  .skill-tag { font-size: 11px; padding: 7px 10px; }
+
+  /* Hero heading tighter */
+  h1 { letter-spacing: -1px !important; }
+
+  .btn-primary, .btn-ghost { padding: 10px 16px; font-size: 11px; width: 100%; text-align: center; }
+
+  .social-pill { font-size: 11px; padding: 8px 14px; }
+
+  .project-card { padding: 16px; gap: 10px; }
+  .tech-pill { font-size: 10px; padding: 3px 8px; }
+
+  .edu-card { padding: 18px; }
+  .exp-role { font-size: 1.1rem; }
+
+  .contact-row { gap: 10px; }
+  .contact-label { font-size: 12px; }
+  .contact-prefix { font-size: 10px; }
+}

@@ -12,7 +12,7 @@ export default function Hero() {
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 1, paddingTop: 60, paddingBottom: 60 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 56, alignItems: 'center' }}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 60, alignItems: 'center' }}
              className="hero-grid">
 
           {/* Left / Text side */}
@@ -52,8 +52,8 @@ export default function Hero() {
           </div>
 
           {/* Right / Code Window */}
-          <div className="fade-up-delay-4" style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <div className="code-window">
+          <div className="fade-up-delay-4" style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="code-window" style={{ width: '100%' }}>
               <div className="code-window-chrome">
                 <span className="dot dot-red" />
                 <span className="dot dot-yellow" />
@@ -105,11 +105,11 @@ export default function Hero() {
 
       <style>{`
         @media (min-width: 768px) {
-          .hero-grid { grid-template-columns: 1fr 1fr !important; }
+          .hero-grid { grid-template-columns: 1.1fr 0.9fr !important; }
         }
         @media (max-width: 767px) {
           .hero-grid > div:last-child { justify-content: flex-start !important; }
-          .code-window { max-width: 100% !important; }
+          .code-window { width: 100% !important; }
         }
       `}</style>
     </section>

@@ -56,12 +56,6 @@ export default function Experience() {
         <div className="section-tag" style={{ marginTop: 32 }}>&lt;/Experience&gt;</div>
       </div>
 
-      <style>{`
-        @media (max-width: 640px) {
-          .exp-row { flex-direction: column !important; gap: 16px !important; }
-          .exp-gutter { border-right: none !important; border-bottom: 1px solid var(--border); padding-right: 0 !important; padding-bottom: 16px; min-width: unset !important; }
-        }
-      `}</style>
     </section>
   );
 }
