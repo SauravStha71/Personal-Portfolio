@@ -11,90 +11,49 @@ function MailIcon() {
 }
 
 const CONTACTS = [
-  {
-    Icon: MailIcon,
-    prefix: 'mailto:',
-    label: 'shresthasaurav71@gmail.com',
-    href: 'mailto:shresthasaurav71@gmail.com',
-  },
-  {
-    Icon: SiGithub,
-    prefix: 'github.com/',
-    label: 'SauravStha71',
-    href: 'https://github.com/SauravStha71', 
-  },
-  {
-    Icon: FaLinkedin,
-    prefix: 'linkedin.com/in/',
-    label: 'SauravShrestha',
-    href: 'https://www.linkedin.com/in/sauravshrestha71/',
-  },
+  { Icon: MailIcon, prefix: 'mailto:', label: 'shresthasaurav71@gmail.com', href: 'mailto:shresthasaurav71@gmail.com' },
+  { Icon: SiGithub, prefix: 'github.com/', label: 'SauravStha71', href: 'https://github.com/SauravStha71' },
+  { Icon: FaLinkedin, prefix: 'linkedin.com/in/', label: 'SauravShrestha', href: 'https://www.linkedin.com/in/sauravshrestha71/' },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-wrapper" style={{ borderTop: '1px solid var(--border)', padding: 0 }}>
-      <div className="container" style={{ paddingTop: 80, paddingBottom: 0 }}>
-        {/* Opening tag */}
+    <section id="contact" className="section-wrapper" style={{ borderTop: '1px solid var(--border)' }}>
+      <div className="container">
         <div className="section-tag" style={{ marginBottom: 32 }}>&lt;Contact /&gt;</div>
-
-        {/* Eyebrow */}
         <div className="eyebrow">/* 05 — contact */</div>
-
-        {/* Heading */}
         <h2 className="section-heading" style={{ marginBottom: 48 }}>
           <span className="bracket-red">&lt;</span>Contact<span className="bracket-red"> /&gt;</span>
         </h2>
-      </div>
 
-      {/* Two-panel layout */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderTop: '1px solid var(--border)' }}
-           className="contact-panels">
+        <div className="contact-panels" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', border: '1px solid var(--border)' }}>
+          {/* Left */}
+          <div style={{ background: 'var(--ink)', padding: 'clamp(28px, 4vw, 48px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid var(--border)' }}>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', fontWeight: 700, color: '#080808', lineHeight: 1.1, marginBottom: 16 }}>
+              Let's work<br />together.
+            </h3>
+            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 300, fontSize: '0.85rem', color: '#444', lineHeight: 1.8 }}>
+              Open to freelance projects, collaborations, and full-time opportunities. Let's build something great.
+            </p>
+          </div>
 
-        {/* Left — light inverted panel */}
-        <div style={{
-          background: 'var(--ink)',
-          padding: 'clamp(40px, 8vw, 80px)',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          borderRight: '1px solid var(--border)',
-        }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(2rem, 4vw, 3rem)',
-            fontWeight: 700,
-            color: '#080808',
-            lineHeight: 1.1,
-            marginBottom: 20,
-          }}>
-            Let's work<br />together.
-          </h3>
-          <p style={{ fontFamily: 'var(--font-body)', fontWeight: 300, fontSize: '0.9rem', color: '#444', lineHeight: 1.8 }}>
-            Open to freelance projects, collaborations, and full-time opportunities. Let's build something great.
-          </p>
+          {/* Right */}
+          <div style={{ background: 'var(--card)', padding: 'clamp(28px, 4vw, 48px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            {CONTACTS.map(({ Icon, prefix, label, href }) => (
+              <a key={label} href={href} target="_blank" rel="noreferrer" className="contact-row"
+                style={{ display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none' }}>
+                <span className="contact-icon"><Icon /></span>
+                <div>
+                  <div className="contact-prefix">{prefix}</div>
+                  <div className="contact-label">{label}</div>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* Right — dark contact rows */}
-        <div style={{ background: 'var(--card)', padding: 'clamp(40px, 8vw, 80px)' }}>
-          {CONTACTS.map(({ Icon, prefix, label, href }) => (
-            <a key={label} href={href} target="_blank" rel="noreferrer" className="contact-row"
-               style={{ display: 'flex', alignItems: 'center', gap: 14, textDecoration: 'none' }}>
-              <span className="contact-icon"><Icon /></span>
-              <div>
-                <div className="contact-prefix">{prefix}</div>
-                <div className="contact-label">{label}</div>
-              </div>
-            </a>
-          ))}
-        </div>
+        <div className="section-tag" style={{ marginTop: 24 }}>&lt;/Contact&gt;</div>
       </div>
-
-      {/* Closing tag inside container after panels */}
-      <div className="container" style={{ paddingTop: 24, paddingBottom: 0 }}>
-        <div className="section-tag">&lt;/Contact&gt;</div>
-      </div>
-
     </section>
   );
 }
