@@ -1,17 +1,17 @@
 const EXPERIENCE = [
   {
     lineNum: '01',
-    period: '2024 – Present',
-    company: 'Freelance',
-    role: 'Frontend Developer',
-    desc: 'Designing and developing responsive web applications for clients across various industries. Focused on delivering clean React interfaces, pixel-perfect Tailwind CSS implementations, and performant TypeScript codebases.',
+    period: 'March 2025 – June 2025',
+    company: 'Nepal Electricity Authority',
+    role: 'Frontend Intern',
+    desc: 'Developed and deployed web based systems, including an MD-Schedule Management System and SMS platform, using the MERN stack to build secure and user friendly solutions. Enhanced operational efficiency while strengthening expertise in full-stack development, database management, and system optimization.',
   },
   {
     lineNum: '02',
-    period: '2023 – 2024',
-    company: 'Academic Projects',
-    role: 'React Developer',
-    desc: 'Built full-stack applications as part of university coursework — including an SMS system, meeting scheduler, and e-commerce prototype — using React, PostgreSQL, and MongoDB.',
+    period: 'October 2025 – May 2026',
+    company: 'Krizmatic Digital Solutions',
+    role: 'Digital Marketing Analyst and Strategist',
+    desc: 'Worked as a Digital Marketing Analyst and Strategist, creating data driven marketing campaigns and optimizing online presence through SEO, social media, and audience analytics. Improved brand engagement and campaign performance while strengthening skills in digital strategy, market analysis, and content optimization.',
   },
 ];
 
@@ -43,8 +43,7 @@ export default function Experience() {
               </div>
 
               {/* Content */}
-              <div style={{ flex: 1 }}>
-                <div className="exp-todo">{'// TODO: Replace with actual data'}</div>
+              <div style={{ flex: 1 }}>            
                 <div className="exp-role">{e.role}</div>
                 <div className="exp-desc">{e.desc}</div>
               </div>
