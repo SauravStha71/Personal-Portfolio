@@ -14,7 +14,7 @@ export default function Footer() {
       gap: 8,
     }}>
       <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent)', fontSize: 14 }}>&lt;/&gt;</span>
-      Designed &amp; built by Saurav Shrestha · 2025
+      Designed &amp; built by Saurav Shrestha · 2026
     </footer>
   );
 }
