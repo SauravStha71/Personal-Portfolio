@@ -7,7 +7,7 @@ const PROJECTS = [
     title: 'Video Editor Portfolio',
     desc: 'A cinematic, editorial style portfolio website for a video editor built using React and Tailwind CSS, featuring smooth scroll triggered animations, hover to play video cards, and an asymmetric Behance inspired layout. Integrated Cloudinary for a dynamic media library, optimized video delivery, and a premium fast loading user experience.',
     tech: ['React', 'Tailwind CSS', 'Cloudinary'],
-    repo: 'https://maharjandipen.netlify.app/',
+    repo: 'https://www.dipenmaharjan.com/',
     isWebsite: true,
   },
   {
