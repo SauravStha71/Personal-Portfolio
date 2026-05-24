@@ -605,6 +605,10 @@ a {
   background: var(--border);
 }
 
+/* Responsive visibility helpers */
+.show-mobile  { display: none !important; }
+.hidden-mobile { display: flex; }
+
 /* ============================================================
    ANIMATIONS
    ============================================================ */
@@ -619,6 +623,13 @@ a {
 .fade-up-delay-3 { animation: fadeUp 0.7s ease 0.35s forwards; opacity: 0; }
 .fade-up-delay-4 { animation: fadeUp 0.7s ease 0.5s forwards; opacity: 0; }
 .fade-up-delay-5 { animation: fadeUp 0.7s ease 0.65s forwards; opacity: 0; }
+
+/* ============================================================
+   RESPONSIVE — DESKTOP HERO 2-COL (≥ 769px)
+   ============================================================ */
+@media (min-width: 769px) {
+  .hero-grid { grid-template-columns: 1.1fr 0.9fr !important; }
+}
 
 /* ============================================================
    RESPONSIVE — TABLET (≤ 1024px)
@@ -640,8 +651,13 @@ a {
    RESPONSIVE — MOBILE (≤ 768px)
    ============================================================ */
 @media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+
   .container { padding: 0 24px; }
   .section-wrapper { padding: 56px 0; }
+
+  .hidden-mobile { display: none !important; }
+  .show-mobile { display: flex !important; }
 
   /* Typography scale-down */
   .section-heading { font-size: clamp(1.6rem, 6vw, 2.4rem); }
@@ -657,7 +673,7 @@ a {
   /* Buttons */
   .btn-primary, .btn-ghost { font-size: 12px; padding: 11px 20px; }
 
-  /* Skills grid — 2 cols on mobile */
+  /* Skills grid */
   .skill-row-grid { grid-template-columns: repeat(2, 1fr) !important; }
 
   /* Projects — 1 col */
@@ -687,11 +703,8 @@ a {
 
   /* Contact — stacked */
   .contact-panels { grid-template-columns: 1fr !important; }
-  .contact-panels > div:first-child {
-    border-right: none !important;
-    border-bottom: 1px solid var(--border);
-  }
-  .contact-label { font-size: 13px; }
+  .contact-panels > div:first-child { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+  .contact-label { font-size: 13px; word-break: break-all; }
 }
 
 /* ============================================================
@@ -703,14 +716,14 @@ a {
 
   .section-heading { font-size: clamp(1.4rem, 7vw, 2rem); }
 
-  /* Skills — 1 col on very small phones */
+  /* Skills — 2 col on small phones */
   .skill-row-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
   .skill-tag { font-size: 11px; padding: 7px 10px; }
 
   /* Hero heading tighter */
   h1 { letter-spacing: -1px !important; }
 
-  .btn-primary, .btn-ghost { padding: 10px 16px; font-size: 11px; width: 100%; text-align: center; }
+  .btn-primary, .btn-ghost { padding: 10px 16px; font-size: 11px; }
 
   .social-pill { font-size: 11px; padding: 8px 14px; }
 
@@ -721,6 +734,23 @@ a {
   .exp-role { font-size: 1.1rem; }
 
   .contact-row { gap: 10px; }
-  .contact-label { font-size: 12px; }
+  .contact-label { font-size: 12px; word-break: break-all; }
   .contact-prefix { font-size: 10px; }
+}
+
+/* ============================================================
+   RESPONSIVE — EXTRA SMALL (≤ 360px)
+   ============================================================ */
+@media (max-width: 360px) {
+  .container { padding: 0 12px; }
+  .section-wrapper { padding: 36px 0; }
+
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; justify-content: center; }
+
+  .skill-tag { font-size: 10px; padding: 6px 8px; gap: 6px; }
+
+  .project-card { padding: 14px; }
+
+  .contact-label { font-size: 11px; }
+  .contact-prefix { font-size: 9px; }
 }

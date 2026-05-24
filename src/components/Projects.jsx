@@ -72,11 +72,6 @@ export default function Projects() {
         </div>
         <div className="section-tag" style={{ marginTop: 32 }}>&lt;/Projects&gt;</div>
       </div>
-      <style>{`
-        @media (max-width: 640px) {
-          .projects-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

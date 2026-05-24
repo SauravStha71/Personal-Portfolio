@@ -102,16 +102,6 @@ export default function Hero() {
 
         </div>
       </div>
-
-      <style>{`
-        @media (min-width: 768px) {
-          .hero-grid { grid-template-columns: 1.1fr 0.9fr !important; }
-        }
-        @media (max-width: 767px) {
-          .hero-grid > div:last-child { justify-content: flex-start !important; }
-          .code-window { width: 100% !important; }
-        }
-      `}</style>
     </section>
   );
 }

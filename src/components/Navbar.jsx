@@ -33,7 +33,7 @@ export default function Navbar() {
             SS<span style={{ color: 'var(--accent)' }}></span>
           </a>
 
-          {/* Desktop Links */}
+          {/* Desktop Links — hidden below 768px via global CSS */}
           <div style={{ display: 'flex', gap: 32, alignItems: 'center' }}
                className="hidden-mobile">
             {links.map(l => (
@@ -45,7 +45,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Hamburger */}
+          {/* Hamburger — shown below 768px via global CSS */}
           <button
             onClick={() => setMenuOpen(v => !v)}
             className="hamburger-btn show-mobile"
@@ -64,16 +64,11 @@ export default function Navbar() {
         {links.map(l => (
           <a key={l.label} href={l.href}
              onClick={e => { e.preventDefault(); handleNav(l.href); }}
-             className="nav-link" style={{ fontSize: 13 }}>
+             className="nav-link" style={{ fontSize: 14 }}>
             <span className="prefix">./</span>{l.label}
           </a>
         ))}
       </div>
-
-      <style>{`
-        @media (min-width: 641px) { .show-mobile { display: none !important; } }
-        @media (max-width: 640px) { .hidden-mobile { display: none !important; } }
-      `}</style>
     </>
   );
 }
